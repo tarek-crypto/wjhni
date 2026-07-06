@@ -845,6 +845,162 @@
     .md4 { position: absolute; clip-path: polygon(50% 0%,100% 50%,50% 100%,0 50%); width: 12px; height: 12px; background: var(--green);  opacity: 0.25; top: 15%;  right: 20%; animation: dm-float-a 6s ease-in-out infinite 0.5s; }
 
     /* =============================================
+       MEMORIES
+       ============================================= */
+    .memories {
+      background: var(--gray);
+      padding: 8rem 0 10rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .memories-watermark {
+      position: absolute;
+      top: 44%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--font-latin);
+      font-weight: 900;
+      font-size: clamp(6rem, 15vw, 13rem);
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(78,0,93,0.05);
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -0.03em;
+      z-index: 0;
+    }
+
+    .memories-header {
+      text-align: center;
+      margin-bottom: 5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .memories-header .section-eyebrow {
+      justify-content: center;
+      color: var(--purple);
+    }
+    .memories-header .section-eyebrow::before { display: none; }
+
+    .memories-header .section-title { text-align: center; }
+
+    .memories-gallery {
+      position: relative;
+      z-index: 1;
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .polaroid {
+      background: var(--white);
+      padding: 0.9rem 0.9rem 3.5rem;
+      border-radius: 6px;
+      box-shadow: var(--shadow-soft), 0 2px 4px rgba(0,0,0,0.08);
+      position: relative;
+      transition: transform 0.45s var(--transition), box-shadow 0.45s var(--transition);
+    }
+
+    .polaroid:hover {
+      transform: rotate(0deg) scale(1.03) !important;
+      box-shadow: 0 30px 70px rgba(78,0,93,0.25), 0 4px 8px rgba(0,0,0,0.12);
+      z-index: 3;
+    }
+
+    .polaroid-1 { transform: rotate(-6deg); margin-top: 2rem; }
+    .polaroid-2 { transform: rotate(5deg); margin-top: -1rem; }
+    .polaroid-3 { transform: rotate(-3deg); margin-top: 1.5rem; }
+
+    .polaroid-photo {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border-radius: 2px;
+      background: var(--gray);
+    }
+
+    .polaroid-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .polaroid:hover .polaroid-photo img { transform: scale(1.06); }
+
+    .polaroid-caption {
+      position: absolute;
+      bottom: 1.1rem;
+      left: 0.9rem;
+      right: 0.9rem;
+      text-align: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #444;
+    }
+
+    .polaroid-tape {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-3deg);
+      width: 70px;
+      height: 26px;
+      background: rgba(252, 184, 53, 0.55);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 2;
+    }
+
+    .polaroid-2 .polaroid-tape { background: rgba(46, 182, 125, 0.45); transform: translateX(-50%) rotate(4deg); }
+    .polaroid-3 .polaroid-tape { background: rgba(240, 0, 0, 0.4); transform: translateX(-50%) rotate(-5deg); }
+
+    .polaroid-pin {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 4px 10px rgba(240,0,0,0.4), inset 0 2px 3px rgba(255,255,255,0.4);
+      z-index: 2;
+    }
+
+    .polaroid-2 .polaroid-pin { background: var(--blue); box-shadow: 0 4px 10px rgba(54,197,240,0.4), inset 0 2px 3px rgba(255,255,255,0.4); left: -10px; right: auto; }
+    .polaroid-3 .polaroid-pin { background: var(--green); box-shadow: 0 4px 10px rgba(46,182,125,0.4), inset 0 2px 3px rgba(255,255,255,0.4); }
+
+    .memories-diamonds {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .memories-diamonds .diamond { position: absolute; clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
+    .mdi1 { width: 16px; height: 16px; background: var(--red);    opacity: 0.5; top: 12%; left: 8%;  animation: dm-float-a 8s ease-in-out infinite; }
+    .mdi2 { width: 12px; height: 12px; background: var(--green);  opacity: 0.5; bottom: 15%; right: 10%; animation: dm-float-b 9s ease-in-out infinite 1s; }
+    .mdi3 { width: 20px; height: 20px; background: var(--blue);   opacity: 0.35; top: 65%; left: 4%; animation: dm-float-c 7s ease-in-out infinite 0.5s; }
+    .mdi4 { width: 10px; height: 10px; background: var(--yellow); opacity: 0.6; top: 8%; right: 12%; animation: dm-float-a 6s ease-in-out infinite 2s; }
+
+    @media (max-width: 900px) {
+      .memories-gallery { grid-template-columns: 1fr; max-width: 340px; gap: 4rem; }
+      .polaroid-1, .polaroid-2, .polaroid-3 { margin-top: 0; }
+    }
+
+    @media (max-width: 600px) {
+      .memories { padding: 5rem 0 6rem; }
+    }
+
+    /* =============================================
        PARTNERS
        ============================================= */
     .partners {
@@ -1910,6 +2066,59 @@
 
 
   <!-- ==========================================
+       MEMORIES
+       ========================================== -->
+  <section class="memories" id="memories" aria-label="ذكريات وجهني">
+    <span class="memories-watermark" aria-hidden="true">Memories</span>
+
+    <div class="memories-diamonds" aria-hidden="true">
+      <div class="diamond mdi1"></div>
+      <div class="diamond mdi2"></div>
+      <div class="diamond mdi3"></div>
+      <div class="diamond mdi4"></div>
+    </div>
+
+    <div class="container">
+      <div class="memories-header reveal">
+        <span class="section-eyebrow" style="justify-content:center;display:flex;position:relative;z-index:1;">ذكريات لا تُنسى</span>
+        <h2 class="section-title">
+          لحظات من <span class="accent">النسخة الثانية</span>
+        </h2>
+      </div>
+
+      <div class="memories-gallery">
+        <div class="polaroid polaroid-1 reveal reveal-delay-1">
+          <span class="polaroid-tape" aria-hidden="true"></span>
+          <span class="polaroid-pin" aria-hidden="true"></span>
+          <div class="polaroid-photo">
+            <img src="assets/memories/memory-1.jpeg" alt="مجموعة من المشاركين والممثلين في حدث وجهني" loading="lazy">
+          </div>
+          <p class="polaroid-caption">صورة جماعية — وجهني 2025</p>
+        </div>
+
+        <div class="polaroid polaroid-2 reveal reveal-delay-2">
+          <span class="polaroid-tape" aria-hidden="true"></span>
+          <span class="polaroid-pin" aria-hidden="true"></span>
+          <div class="polaroid-photo">
+            <img src="assets/memories/memory-2.jpeg" alt="أجواء النقاش بين الزوار وممثلي التخصصات" loading="lazy">
+          </div>
+          <p class="polaroid-caption">أجواء النقاش — وجهني 2025</p>
+        </div>
+
+        <div class="polaroid polaroid-3 reveal reveal-delay-3">
+          <span class="polaroid-tape" aria-hidden="true"></span>
+          <span class="polaroid-pin" aria-hidden="true"></span>
+          <div class="polaroid-photo">
+            <img src="assets/memories/memory-3.jpeg" alt="ورشة تعريفية أثناء فعاليات وجهني" loading="lazy">
+          </div>
+          <p class="polaroid-caption">إحدى الورشات — وجهني 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
        PARTNERS
        ========================================== -->
   <section class="partners" id="partners">
@@ -2087,6 +2296,7 @@
           <p class="footer-col-title">التنقل</p>
           <ul class="footer-links-list">
             <li><a href="#about">ما هو وجهني؟</a></li>
+            <li><a href="#memories">ذكرياتنا</a></li>
             <li><a href="#partners">شركاؤنا</a></li>
             <li><a href="#register">التسجيل</a></li>
             <li><a href="https://maps.app.goo.gl/YFY4YG985pVqqgBQ8?g_st=ipc" target="_blank" rel="noopener noreferrer">موقع الحدث</a></li>
@@ -2173,6 +2383,7 @@
       /* Change cursor color per section */
       const sections = [
         { el: document.querySelector('.about'),        color: '#4E005D' },
+        { el: document.querySelector('.memories'),     color: '#F00000' },
         { el: document.querySelector('.partners'),     color: '#2EB67D' },
         { el: document.querySelector('.registration'), color: '#FCB835' },
         { el: document.querySelector('.motto-band'),   color: '#FCB835' },
@@ -2190,7 +2401,7 @@
       }, { passive: true });
 
       /* Hover expand */
-      document.querySelectorAll('a, button, .btn, .partner-card, .reg-card').forEach(el => {
+      document.querySelectorAll('a, button, .btn, .partner-card, .reg-card, .polaroid').forEach(el => {
         el.addEventListener('mouseenter', () => {
           cur.style.width       = '22px';
           cur.style.height      = '22px';
