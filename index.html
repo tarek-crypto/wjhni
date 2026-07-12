@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="وجهني - الحدث الذي يساعدك في اختيار التخصص الجامعي المناسب. النسخة الثالثة - 15-16 جويلية 2026 - الجزائر">
   <title>وجهني — النسخة الثالثة</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Cairo:wght@400;600;700;800;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -845,6 +846,177 @@
     .md4 { position: absolute; clip-path: polygon(50% 0%,100% 50%,50% 100%,0 50%); width: 12px; height: 12px; background: var(--green);  opacity: 0.25; top: 15%;  right: 20%; animation: dm-float-a 6s ease-in-out infinite 0.5s; }
 
     /* =============================================
+       AI ASSISTANT
+       ============================================= */
+    .ai-assistant {
+      background: var(--white);
+      padding: 8rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ai-assistant::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(78,0,93,0.02) 0px,
+        rgba(78,0,93,0.02) 1px,
+        transparent 1px,
+        transparent 40px
+      );
+      pointer-events: none;
+    }
+
+    .ai-bg-shape-1 {
+      position: absolute;
+      top: -80px;
+      right: -60px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(46,182,125,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .ai-bg-shape-2 {
+      position: absolute;
+      bottom: -60px;
+      left: -40px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(252,184,53,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .ai-watermark {
+      position: absolute;
+      top: 46%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--font-latin);
+      font-weight: 900;
+      font-size: clamp(6rem, 15vw, 13rem);
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(78,0,93,0.05);
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -0.03em;
+      z-index: 0;
+    }
+
+    .ai-layout {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 6rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ai-stat-side {
+      position: relative;
+    }
+
+    .ai-stat-outer {
+      position: relative;
+      display: inline-block;
+    }
+
+    .ai-stat-bg {
+      font-family: var(--font-latin);
+      font-weight: 900;
+      font-size: clamp(8rem, 14vw, 13rem);
+      line-height: 0.85;
+      color: var(--green);
+      opacity: 0.06;
+      user-select: none;
+      pointer-events: none;
+      position: absolute;
+      top: 0.08em;
+      left: 0.04em;
+    }
+
+    .ai-stat-letters {
+      font-family: var(--font-latin);
+      font-weight: 900;
+      font-size: clamp(8rem, 14vw, 13rem);
+      line-height: 0.85;
+      color: transparent;
+      -webkit-text-stroke: 2.5px var(--green);
+      position: relative;
+      z-index: 1;
+      display: block;
+    }
+
+    .ai-text-side {
+      position: relative;
+      z-index: 1;
+    }
+
+    .ai-text-side .section-eyebrow {
+      color: var(--purple);
+    }
+
+    .ai-desc {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .ai-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .ai-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .ai-tag-green  { background: rgba(46,182,125,0.1);  color: var(--green);  border: 1px solid rgba(46,182,125,0.25); }
+    .ai-tag-blue   { background: rgba(54,197,240,0.1);  color: var(--blue);   border: 1px solid rgba(54,197,240,0.25); }
+    .ai-tag-yellow { background: rgba(252,184,53,0.12); color: #B8860B;       border: 1px solid rgba(252,184,53,0.3); }
+
+    .ai-diamonds {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .ai-diamonds .diamond { position: absolute; clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
+    .aid1 { width: 14px; height: 14px; background: var(--green);  opacity: 0.5; top: 15%; right: 10%; animation: dm-float-a 8s ease-in-out infinite; }
+    .aid2 { width: 10px; height: 10px; background: var(--yellow); opacity: 0.5; bottom: 18%; left: 6%; animation: dm-float-b 9s ease-in-out infinite 1s; }
+    .aid3 { width: 18px; height: 18px; background: var(--blue);   opacity: 0.35; top: 60%; right: 5%; animation: dm-float-c 7s ease-in-out infinite 0.5s; }
+
+    @media (max-width: 900px) {
+      .ai-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .ai-stat-side { text-align: center; }
+      .ai-stat-letters { font-size: 6rem; }
+      .ai-stat-bg { font-size: 6rem; }
+    }
+
+    @media (max-width: 600px) {
+      .ai-assistant { padding: 5rem 0; }
+    }
+
+    /* =============================================
        MEMORIES
        ============================================= */
     .memories {
@@ -1403,7 +1575,7 @@
       border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
-    .footer-brand {}
+    .footer-brand { position: relative; }
 
     .footer-logo {
       display: flex;
@@ -2066,6 +2238,70 @@
 
 
   <!-- ==========================================
+       AI ASSISTANT
+       ========================================== -->
+  <section class="ai-assistant" id="ai-assistant" aria-label="المساعد الذكي">
+    <div class="ai-bg-shape-1" aria-hidden="true"></div>
+    <div class="ai-bg-shape-2" aria-hidden="true"></div>
+    <span class="ai-watermark" aria-hidden="true">Wejehni</span>
+
+    <div class="ai-diamonds" aria-hidden="true">
+      <div class="diamond aid1"></div>
+      <div class="diamond aid2"></div>
+      <div class="diamond aid3"></div>
+    </div>
+
+    <div class="container">
+      <div class="ai-layout">
+
+        <div class="ai-stat-side reveal">
+          <div class="ai-stat-outer">
+            <span class="ai-stat-bg" aria-hidden="true">W</span>
+            <span class="ai-stat-letters">W</span>
+          </div>
+        </div>
+
+        <div class="ai-text-side">
+          <span class="section-eyebrow reveal">أداة جديدة</span>
+
+          <h2 class="section-title reveal reveal-delay-1">
+            اكتشف تخصصك مع<br>
+            <span class="accent">مساعد وجهني</span>
+          </h2>
+
+          <p class="ai-desc reveal reveal-delay-2">
+            أداة مصممة لمساعدتك في استكشاف التخصصات الجامعية والتعرف على الخيارات المتاحة لك. جرّبها الآن مجاناً وابدأ رحلة اكتشاف مسارك الأكاديمي.
+          </p>
+
+          <div class="ai-tags reveal reveal-delay-3">
+            <span class="ai-tag ai-tag-green">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              مجاني
+            </span>
+            <span class="ai-tag ai-tag-blue">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              متاح 24/7
+            </span>
+            <span class="ai-tag ai-tag-yellow">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              65+ تخصص
+            </span>
+          </div>
+
+          <div class="reveal reveal-delay-4">
+            <a href="https://wjehni-project.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-xl">
+              جرّب المساعد
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
        MEMORIES
        ========================================== -->
   <section class="memories" id="memories" aria-label="ذكريات وجهني">
@@ -2296,6 +2532,7 @@
           <p class="footer-col-title">التنقل</p>
           <ul class="footer-links-list">
             <li><a href="#about">ما هو وجهني؟</a></li>
+            <li><a href="#ai-assistant">المساعد</a></li>
             <li><a href="#memories">ذكرياتنا</a></li>
             <li><a href="#partners">شركاؤنا</a></li>
             <li><a href="#register">التسجيل</a></li>
@@ -2383,6 +2620,7 @@
       /* Change cursor color per section */
       const sections = [
         { el: document.querySelector('.about'),        color: '#4E005D' },
+        { el: document.querySelector('.ai-assistant'),  color: '#4E005D' },
         { el: document.querySelector('.memories'),     color: '#F00000' },
         { el: document.querySelector('.partners'),     color: '#2EB67D' },
         { el: document.querySelector('.registration'), color: '#FCB835' },
