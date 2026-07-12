@@ -115,6 +115,8 @@
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+    .reveal-delay-6 { transition-delay: 0.6s; }
 
     /* =============================================
        HEADER
@@ -1368,6 +1370,26 @@
     .badge-green  { background: rgba(46,182,125,0.1);  color: var(--green); border: 1px solid rgba(46,182,125,0.25); }
     .badge-blue   { background: rgba(54,197,240,0.1);  color: var(--blue);  border: 1px solid rgba(54,197,240,0.25); }
     .badge-yellow { background: rgba(252,184,53,0.12); color: #B8860B;      border: 1px solid rgba(252,184,53,0.3); }
+    .tag-purple   { color: var(--purple); }
+    .tag-red      { color: var(--red); }
+    .badge-purple { background: rgba(78,0,93,0.08);    color: var(--purple); border: 1px solid rgba(78,0,93,0.22); }
+    .badge-red    { background: rgba(240,0,0,0.08);    color: var(--red);    border: 1px solid rgba(240,0,0,0.22); }
+
+    /* Logo-based color block (real partner logos on a neutral backdrop) */
+    .pcb-light {
+      background: var(--gray);
+    }
+    .pcb-light::after { display: none; }
+
+    .partner-logo-img {
+      max-width: 170px;
+      max-height: 130px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+    }
 
     /* =============================================
        REGISTRATION
@@ -1899,6 +1921,11 @@
         flex-shrink: 0;
       }
 
+      .partner-logo-img {
+        max-width: 120px;
+        max-height: 90px;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
@@ -2401,6 +2428,66 @@
             <h3 class="partner-name">Limitless School</h3>
             <p class="partner-desc">مدرسة متخصصة في التطوير والتعليم، تؤمن بأن لا حدود للإمكانات ولا سقف للطموح.</p>
             <span class="partner-badge badge-blue">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              شريك تنظيمي
+            </span>
+          </div>
+        </div>
+
+        <div class="partner-card reveal reveal-delay-3">
+          <div class="partner-color-block pcb-light">
+            <img src="assets/partners/dz-step.png" alt="DZ STEP" class="partner-logo-img">
+          </div>
+          <div class="partner-card-body">
+            <p class="partner-type-tag tag-green">منصة إرشاد وتوجيه</p>
+            <h3 class="partner-name">DZ STEP</h3>
+            <p class="partner-desc">منصة جزائرية تواكب الشباب في اختيار مسارهم الدراسي والمهني، ضمن برنامج DZ Young Leaders.</p>
+            <span class="partner-badge badge-green">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              شريك تنظيمي
+            </span>
+          </div>
+        </div>
+
+        <div class="partner-card reveal reveal-delay-4">
+          <div class="partner-color-block pcb-light">
+            <img src="assets/partners/nextgen.png" alt="NextGen" class="partner-logo-img">
+          </div>
+          <div class="partner-card-body">
+            <p class="partner-type-tag tag-purple">مبادرة شبابية</p>
+            <h3 class="partner-name">NextGen</h3>
+            <p class="partner-desc">مبادرة تعنى بتكوين وتمكين الجيل القادم من القادة الشباب، ضمن برنامج DZ Young Leaders.</p>
+            <span class="partner-badge badge-purple">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              شريك تنظيمي
+            </span>
+          </div>
+        </div>
+
+        <div class="partner-card reveal reveal-delay-5">
+          <div class="partner-color-block pcb-light">
+            <img src="assets/partners/next-step.png" alt="Next Step 2026" class="partner-logo-img">
+          </div>
+          <div class="partner-card-body">
+            <p class="partner-type-tag tag-yellow">برنامج أكاديمي</p>
+            <h3 class="partner-name">Next Step 2026</h3>
+            <p class="partner-desc">برنامج يرافق الطلبة في خطوتهم القادمة نحو بناء مستقبلهم الأكاديمي والمهني.</p>
+            <span class="partner-badge badge-yellow">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              شريك تنظيمي
+            </span>
+          </div>
+        </div>
+
+        <div class="partner-card reveal reveal-delay-6">
+          <div class="partner-color-block pcb-light">
+            <img src="assets/partners/dz-young-leaders.png" alt="DZ Young Leaders" class="partner-logo-img">
+          </div>
+          <div class="partner-card-body">
+            <p class="partner-type-tag tag-red">برنامج قيادي</p>
+            <h3 class="partner-name">DZ Young Leaders</h3>
+            <p class="partner-desc">البرنامج الذي يحتضن ويؤطر مبادرات شبابية جزائرية طموحة، من بينها DZ STEP و NextGen.</p>
+            <span class="partner-badge badge-red">
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               شريك تنظيمي
             </span>
